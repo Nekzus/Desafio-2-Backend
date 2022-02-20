@@ -20,7 +20,7 @@ class Contenedor {
                 });
             }
             productos.push(producto);
-            await fs.promises.writeFile(this.archivo, JSON.stringify(productos));
+            await fs.promises.writeFile(this.archivo, JSON.stringify(productos, null, 2));
             return producto.id;
         }
         catch (error) {
